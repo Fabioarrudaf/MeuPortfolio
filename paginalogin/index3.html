@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Atividade Avaliativa 3</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Login</h1>
+        <div class="input">
+            <img src="imagemUsuarioEx3.png" alt="logoUsuario">
+            <input id="name" type="text" value="" placeholder="Nome de usuário">
+        </div>
+        <div class="input">
+            <img src="cadeadoEx3.png" alt="logoCadeado">
+            <input id="password" type="password" value="" placeholder="Senha">
+        </div>
+        <button id="btn">Entrar</button>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        var botao = document.getElementById('btn');
+        botao.addEventListener("click", logn);
+
+        function logn() {
+            var name = document.getElementById('name').value;
+            var senha = document.getElementById('password').value;
+            var resultado = document.getElementById('resultado')
+
+            if (name === 'ADMIN' || name === 'admin' || name === 'Admin' && senha === 'ASDFG') {
+                resultado.textContent = 'Acesso liberado';
+            }
+            else {
+                resultado.textContent = 'Acesso Negado';
+            };
+        }
+    </script>
+</body>
+
+</html>

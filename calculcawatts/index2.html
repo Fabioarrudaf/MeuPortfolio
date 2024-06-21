@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Avaliativa 2</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Calculadora de Quilowatts</h1>
+        <label>Qual o valor do salário mínimo: R$ <br>
+            <input id="salario" type="number">
+        </label>
+        <br>
+        <label>Qual a quantidade de watts gasto na residência:<br><input id="watts" type="number">
+        </label>
+        <br>
+        <button id="btn">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            var salario = parseFloat(document.getElementById('salario').value);
+            var wattsGastos = parseFloat(document.getElementById('watts').value);
+
+            var valorwatt = salario / 7 / 100;
+            var valorTotal = valorwatt * wattsGastos;
+            var desconto = valorTotal * 0.9;
+
+            var resultado = document.getElementById('resultado');
+
+            resultado.innerHTML = 'Valor de cada Quilowatt: R$' + valorwatt.toFixed(2) +
+                '<BR>Valor total a ser pago: R$' + valorTotal.toFixed(2) +
+                '<BR>Valor com desconto de 10%: R$' + desconto.toFixed(2) });
+    </script>
+</body>
+
+</html>

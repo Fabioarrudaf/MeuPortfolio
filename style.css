@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: #0b0f19;
+        --background: #eaedf6;
+        --primary: #2c3f6d;
+        --secondary: #839ad2;
+        --accent: #3c5eb4;
+        --fundo: #d1d1d1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #e6eaf4;
+        --background: #090c15;
+        --primary: #93a6d4;
+        --secondary: #2d447c;
+        --accent: #4a6dc2;
+        --fundo: #1a1f2d;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+/* header */
+
+header {
+    padding: 1rem 0;
+    position: absolute;
+    font-family: Inter, sans-serif;
+}
+
+#insta-logo {
+    width: 1.5rem;
+    transition: filter 0.2s;
+}
+
+#linkedin-logo {
+    width: 1.5rem;
+    transition: filter 0.2s;
+}
+
+#github-logo {
+    width: 1.5rem;
+    transition: filter 0.2s;
+}
+
+#insta-logo:hover {
+    width: 1.5rem;
+    filter: invert(0.5);
+}
+
+#linkedin-logo:hover {
+    width: 1.5rem;
+    filter: invert(0.5);
+}
+
+#github-logo:hover {
+    width: 1.5rem;
+    filter: invert(0.5);
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration-color: var(--accent);
+    transition: 0.3s;
+    color: var(--accent);
+}
+
+.logo-seta {
+    text-align: center;
+    padding-top: 8em;
+}
+
+#seta {
+    animation: jump infinite 2s;
+    position: absolute;
+}
+
+@keyframes jump {
+    0% {
+        padding-top: 0em;
+    }
+
+    50% {
+        padding-top: 1em;
+    }
+
+    100% {
+        padding-top: 0em;
+    }
+}
+
+/* sections */
+
+#myName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: var(--text);
+    font-family: 'Roboto Mono', sans-serif;
+
+}
+
+#myName h1 {
+    font-size: 6rem;
+}
+
+.typing {
+    width: 500px;
+    animation: typing 2s steps(22) infinite alternate, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2.5rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.sobre {
+    padding: 4rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sobre h2 {
+    font-size: 3rem;
+    color: var(--text);
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+    width: 40em;
+    padding-top: 1em;
+}
+
+#fotoEu {
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--fundo);
+}
+
+/* habilidades */
+
+.habilidades {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.habilidades>h2 {
+    font-size: 3em;
+}
+
+.habilidades p {
+    font-size: 1.2rem;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+}
+
+.img-habilidades {
+    width: 7em;
+    padding-top: 1.5em;
+}
+
+/* Projetos */
+
+.projetos {
+    padding: 4rem 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projetos h2 {
+    font-size: 3rem;
+    color: var(--text);
+}
+
+.projetos p {
+    font-size: 1.2rem;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+}
+
+.carrosel {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    gap: 2em;
+    flex-wrap: wrap;
+
+}
+
+.carrosel .projetos:last-child{
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.projeto {
+    width: 300px;
+    padding: 20px;
+    background-color: var(--fundo);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    transition: 2s;     
+    box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.075);
+}
+
+.projeto:hover {
+    background-color: var(--accent);
+    transition: 2s;
+}
+
+.imgs-projetos{
+    transform:scale(1.8);
+}
+
+.projeto img {
+    width: 17em;
+    transition: filter 0.3s;
+}
+
+.projeto:hover img {
+    filter: brightness(0.8);
+}
+
+.projeto h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.projeto .descricao {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--background);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.projeto:hover .descricao {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* contato */
+
+#contato {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#linkedin {
+    height: 2.5em;
+    padding-left: 2em;
+    transition: filter 0.3s;
+}
+
+#linkedin:hover {
+    filter: invert(0.5);
+}
+
+#contato>h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+input {
+    height: 2.5em;
+    width: 35rem;
+    background-color: var(--fundo);
+    border: none;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 1.2em;
+    padding-left: 10px;
+}
+
+#mensagem {
+    height: 10em;
+    width: 40em;
+    background-color: var(--fundo);
+    border: none;
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+
+#enviar {
+    cursor: pointer;
+    height: 3em;
+    width: 8em;
+    text-align: center;
+    background-color: var(--fundo);
+    border: none;
+    color: var(--text);
+    font-family: 'Roboto Mono', sans-serif;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#enviar:hover {
+    background-color: var(--accent);
+    transition: 0.3s;
+}
+
+/* Footer */
+
+form {
+    text-align: center;
+    font-size: 1em;
+}
+
+footer {
+    background-color: var(--fundo);
+    height: 3em;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 375px) {
+    .typing {
+        font-size: 27px;
+        width: 330px;
+    }
+}
+
+@media (max-width: 750px) {
+    #mensagem {
+        width: 30em;
+    }
+}
+
+@media (min-width: 425px) {
+    .projetos {
+        display: inline-flexbox;
+    }
+}
+
+@media (max-width: 980px) {
+    .sobre-container {
+        display: inline-block;
+    }
+
+    #fotoEu {
+        padding-top: 2em;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 785px) {
+    .sobre p {
+        width: 30em;
+    }
+}
+
+@media (max-width: 610px) {
+    .sobre p {
+        font-size: 1em;
+    }
+
+    #insta-logo {
+        width: 1.5rem;
+        transition: filter 0.2s;
+        padding-top: 10px;
+    }
+
+    #linkedin-logo {
+        width: 1.5rem;
+        transition: filter 0.2s;
+    }
+
+    #github-logo {
+        width: 1.5rem;
+        transition: filter 0.2s;
+    }
+}
+
+@media (max-width: 920px) {
+    .carrosel {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media (max-width: 580px) {
+
+    input,
+    #mensagem {
+        width: 15em;
+    }
+}
+
+@media (max-width: 500px) {
+    .sobre p {
+        width: 22em;
+    }
+}
+
+@media (min-width: 1117px) {
+    .sobre p {
+
+        padding-left: 2em;
+    }
+}
+
+@media (max-width: 1583px) {
+    .imgs-projetos {
+        transform:scale(1.3);
+    }
+}
+
+@media (max-width: 1175px) {
+    .imgs-projetos {
+        transform:scale(1.1);
+    }
+}
