@@ -70,19 +70,16 @@ header {
 #github-logo:hover {
     width: 1.5rem;
     filter: invert(0.5);
-
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-
 }
 
 nav ul li {
     display: inline;
     margin: 0 15px;
-
 }
 
 nav ul li a {
@@ -100,12 +97,14 @@ nav ul li a:hover {
 
 .logo-seta {
     text-align: center;
+    align-items: center;
     padding-top: 8em;
 }
 
 #seta {
     animation: jump infinite 2s;
     position: absolute;
+    align-items: center;
 }
 
 @keyframes jump {
@@ -133,7 +132,6 @@ nav ul li a:hover {
     height: 100vh;
     color: var(--text);
     font-family: 'Roboto Mono', sans-serif;
-
 }
 
 #myName h1 {
@@ -402,6 +400,10 @@ footer {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+#footer-fabio{
+    text-decoration: underline;
 }
 
 @media (min-width: 375px) {
