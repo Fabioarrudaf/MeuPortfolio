@@ -96,15 +96,15 @@ nav ul li a:hover {
 }
 
 .logo-seta {
-    text-align: center;
-    align-items: center;
     padding-top: 8em;
+    text-align: center;
 }
 
 #seta {
-    animation: jump infinite 2s;
+    margin: auto;
+    animation: jump infinite 1s;
     position: absolute;
-    align-items: center;
+
 }
 
 @keyframes jump {
@@ -128,7 +128,6 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     height: 100vh;
     color: var(--text);
     font-family: 'Roboto Mono', sans-serif;
@@ -136,21 +135,35 @@ nav ul li a:hover {
 
 #myName h1 {
     font-size: 6rem;
+    text-align: center;
 }
 
-.typing {
-    width: 500px;
-    animation: typing 2s steps(22) infinite alternate, blink .5s step-end infinite alternate;
+
+#front {
+    width: 210px;
+    animation: typing 2.5s steps(25) infinite alternate, blink .3s step-end infinite alternate;
+    position: absolute;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: var(--accent);
+    padding-left: 1.3em;
+}
+
+#typing2 {
+    font-size: 2.5em;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes typing {
     from {
-        width: 0;
+        width: 1px;
     }
 }
 
@@ -242,10 +255,9 @@ nav ul li a:hover {
     margin-top: 2rem;
     gap: 2em;
     flex-wrap: wrap;
-
 }
 
-.carrosel .projetos:last-child{
+.carrosel .projetos:last-child {
     margin-right: auto;
 }
 
@@ -263,7 +275,7 @@ a {
     cursor: pointer;
     transition: background-color 0.3s;
     border-radius: 20px;
-    transition: 2s;     
+    transition: 2s;
     box-shadow: 0px 20px 50px rgba(255, 255, 255, 0.075);
 }
 
@@ -272,8 +284,8 @@ a {
     transition: 2s;
 }
 
-.imgs-projetos{
-    transform:scale(1.8);
+.imgs-projetos {
+    transform: scale(1.8);
 }
 
 .projeto img {
@@ -313,18 +325,9 @@ a {
 /* contato */
 
 #contato {
+    align-items: center;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-}
-
-#linkedin {
-    height: 2.5em;
-    padding-left: 2em;
-    transition: filter 0.3s;
-}
-
-#linkedin:hover {
-    filter: invert(0.5);
 }
 
 #contato>h2 {
@@ -345,6 +348,7 @@ input {
     color: var(--text);
     font-size: 1.2em;
     padding-left: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.116)
 }
 
 #mensagem {
@@ -355,8 +359,26 @@ input {
     border-radius: 5px;
     color: var(--text);
     font-size: 18px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.281)
 }
 
+#linkedin {
+    width: 40px;
+}
+
+.lista-logos {
+    height: 2.5em;
+    transition: filter 0.3s;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s;
+    padding-left: 10px;
+}
+
+.lista-logos:hover {
+    filter: invert(0.5);
+}
 
 #enviar {
     cursor: pointer;
@@ -369,11 +391,13 @@ input {
     font-family: 'Roboto Mono', sans-serif;
     border-radius: 5px;
     transition: 0.3s;
+    font-size: 1em
 }
 
 #enviar:hover {
     background-color: var(--accent);
     transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.384)
 }
 
 /* Footer */
@@ -402,16 +426,11 @@ footer {
     transform: translateY(0);
 }
 
-#footer-fabio{
+#footer-fabio {
     text-decoration: underline;
 }
 
-@media (min-width: 375px) {
-    .typing {
-        font-size: 27px;
-        width: 330px;
-    }
-}
+/* @media */
 
 @media (max-width: 750px) {
     #mensagem {
@@ -419,9 +438,29 @@ footer {
     }
 }
 
-@media (min-width: 425px) {
+@media (max-width: 425px) {
     .projetos {
         display: inline-flexbox;
+    }
+
+    #myName h1 {
+        font-size: 3em;
+    }
+
+}
+
+@media (max-width: 460px) {
+
+    #insta-logo,
+    #linkedin-logo,
+    #github-logo,
+    #barra {
+        display: none;
+    }
+
+    nav ul li a {
+        font-size: 0.8em;
+        display: table-cell;
     }
 }
 
@@ -462,6 +501,11 @@ footer {
         width: 1.5rem;
         transition: filter 0.2s;
     }
+
+    #github-logo:hover {
+        width: 1rem;
+        filter: invert(0.5);
+    }
 }
 
 @media (max-width: 920px) {
@@ -483,6 +527,11 @@ footer {
     .sobre p {
         width: 22em;
     }
+
+    .typing {
+        font-size: 25.5px;
+        width: 310px;
+    }
 }
 
 @media (min-width: 1117px) {
@@ -494,12 +543,72 @@ footer {
 
 @media (max-width: 1583px) {
     .imgs-projetos {
-        transform:scale(1.3);
+        transform: scale(1.3);
     }
 }
 
 @media (max-width: 1175px) {
     .imgs-projetos {
-        transform:scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 370px) {
+    .sobre p {
+        font-size: 0.9em;
+    }
+
+    .habilidades {
+        font-size: 1em;
+    }
+
+    .habilidades p {
+        font-size: 1em
+    }
+
+    ;
+}
+
+@media (max-width: 334px) {
+    #fotoEu {
+        width: 250px;
+    }
+
+    .sobre p {
+        font-size: 1em;
+        width: 290px;
+    }
+
+    .projeto img {
+        width: 13em;
+        transition: filter 0.3s;
+    }
+
+    .projeto .descricao {
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.8rem;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        background: var(--background);
+        color: var(--text);
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .projeto:hover .descricao {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .projeto {
+        width: 250px;
+    }
+
+    .img-habilidades {
+        width: 80px;
     }
 }

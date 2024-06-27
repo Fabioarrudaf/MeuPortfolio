@@ -17,7 +17,7 @@
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li>|</li>
+                <li id="barra">|</li>
                 <li>
                     <a href="https://www.instagram.com/fabioarrudaf/" target="_blank">
                         <img src="src/logotipo-do-instagram.png" alt="instagram" id="insta-logo"></a>
@@ -34,7 +34,7 @@
     <main>
         <section id="myName">
             <h1>Fábio Arruda</h1>
-            <p class="typing">Programador Front-End</p>
+            <p><span id="typing2">Programador </span><span id="front">Front-End</span></p>
             <div class="logo-seta">
                 <a href="#sobre">
                     <img src="src/seta.png" alt="seta" id="seta">
@@ -113,15 +113,23 @@
             <br>
             <h3>Me chame nas minhas redes sociais!</h3>
             <br>
-            <a href="https://www.instagram.com/fabioarrudaf/" target="_blank">
-                <img src="src/logotipo-do-instagram.png" id="linkedin" alt="instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/f%C3%A1bio-arruda-freitas-0a0395268/" target="_blank">
-                <img src="src/logotipo-do-linkedin (1).png" id="linkedin" alt="linkedin">
-            </a>
-            <a href="https://github.com/Fabioarrudaf" target="_blank">
-                <img src="src/github.png" id="linkedin" alt="github">
-            </a>
+            <ul>
+                <li class="lista-logos">
+                    <a href="https://www.instagram.com/fabioarrudaf/" target="_blank">
+                        <img src="src/logotipo-do-instagram.png" id="linkedin" alt="instagram">
+                    </a>
+                </li>
+                <li class="lista-logos">
+                    <a href="https://www.linkedin.com/in/f%C3%A1bio-arruda-freitas-0a0395268/" target="_blank">
+                        <img src="src/logotipo-do-linkedin (1).png" id="linkedin" alt="linkedin">
+                    </a>
+                </li>
+                <li class="lista-logos">
+                    <a href="https://github.com/Fabioarrudaf" target="_blank">
+                        <img src="src/github.png" id="linkedin" alt="github">
+                    </a>
+                </li>
+            </ul>
             <br><br>
             <h3>Mande um E-mail!</h3>
             <br>
@@ -130,7 +138,8 @@
                 <br><br>
                 <input type="email" name="email" placeholder="Digite seu e-mail" required>
                 <br><br>
-                <textarea cols="30" rows="10" name="message" placeholder="Digite sua mensagem" required id="mensagem"></textarea>
+                <textarea cols="30" rows="10" name="message" placeholder="Digite sua mensagem" required
+                    id="mensagem"></textarea>
                 <br><br>
                 <button type="submit" id="enviar">ENVIAR</button>
 
