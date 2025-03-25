@@ -10,3 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
 });
+
+
+document.querySelector('.ui-switch input').addEventListener('click', (e)=>{
+    e.target.classList.toggle('ball-move');
+    document.body.classList.toggle('light');    
+});
