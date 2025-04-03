@@ -211,7 +211,7 @@ nav ul li a:hover {
 
 #front {
     width: 210px;
-    animation: typing 2.5s steps(25) infinite alternate, blink .3s step-end infinite alternate;
+    animation: typing 2.5s steps(25) infinite alternate, blink step-end infinite alternate;
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
